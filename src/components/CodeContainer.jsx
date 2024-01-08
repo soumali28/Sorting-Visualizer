@@ -1,9 +1,18 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function CodeContainer() {
   return (
-    <>
+    <motion.div
+      initial={{ x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       {/* dynamic code block */}
       <details className="dropdown w-full mt-3">
         <summary className="btn rounded-none">
@@ -27,7 +36,7 @@ function CodeContainer() {
           </pre>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }
 

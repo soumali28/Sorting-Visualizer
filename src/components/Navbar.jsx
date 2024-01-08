@@ -31,8 +31,10 @@ function Navbar() {
         </div>
         <div className={`max-md:flex-col  ${isOpen ? "" : "max-md:hidden"}`}>
           <div className="mx-3">
-            <label>Length:</label>
+            <label for="length">Length:</label>
             <input
+              id="length"
+              name="length"
               type="range"
               min={0}
               max="100"
@@ -41,8 +43,10 @@ function Navbar() {
             />
           </div>
           <div className="mx-3">
-            <label>Speed:</label>
+            <label for="speed">Speed:</label>
             <input
+              id="speed"
+              name="speed"
               type="range"
               min={0}
               max="100"
