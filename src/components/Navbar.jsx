@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
+import { FiMoon, FiSun } from "react-icons/fi";
 import CodeContainer from "./CodeContainer";
 
 function Navbar() {
@@ -16,8 +17,19 @@ function Navbar() {
   };
   return (
     <>
-      <div className="flex items-center justify-center">
-        <span className="text-3xl my-3">Sorting Visualizer </span>
+      <div className="flex items-center justify-between mx-8 my-4">
+        <span className="text-3xl">Sorting Visualizer </span>
+        <div>
+          <label className="swap swap-rotate">
+            <input type="checkbox" className="theme-controller" value="cmyk" />
+
+            {/* sun icon */}
+            <FiSun className="swap-on flex" fontSize={26}/>
+
+            {/* moon icon */}
+            <FiMoon className="swap-off" fontSize={26}/>
+          </label>
+        </div>
       </div>
       <div className="navbar bg-base-100 flex">
         <div className="flex-none mx-2">
