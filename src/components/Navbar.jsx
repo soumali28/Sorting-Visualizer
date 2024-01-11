@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { FiMoon, FiSun } from "react-icons/fi";
-import CodeContainer from "./CodeContainer";
+import Container from "./Container";
 
-function Navbar() {
+function Navbar(props) {
   const [isOpen, setOpen] = useState(false);
   const [isOpenCode, setCodeOpen] = useState(false);
 
@@ -15,6 +15,7 @@ function Navbar() {
   const toggleCodeOpen = () => {
     setCodeOpen(!isOpenCode);
   };
+
   return (
     <>
       <div className="flex items-center justify-between mx-8 my-4">
@@ -24,10 +25,10 @@ function Navbar() {
             <input type="checkbox" className="theme-controller" value="cmyk" />
 
             {/* sun icon */}
-            <FiSun className="swap-on flex" fontSize={26}/>
+            <FiSun className="swap-on flex" fontSize={26} />
 
             {/* moon icon */}
-            <FiMoon className="swap-off" fontSize={26}/>
+            <FiMoon className="swap-off" fontSize={26} />
           </label>
         </div>
       </div>
@@ -73,7 +74,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      {isOpenCode ? <CodeContainer /> : ""}
+      <Container isOpenCode={isOpenCode} />
     </>
   );
 }

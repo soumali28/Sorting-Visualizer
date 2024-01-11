@@ -12,6 +12,7 @@ function CodeContainer() {
         duration: 0.8,
         ease: [0, 0.71, 0.2, 1.01],
       }}
+      className="mr-56"
     >
       {/* dynamic code block */}
       <details className="dropdown w-full mt-3">

@@ -5,7 +5,7 @@ function App(props) {
   return (
     <>
       <Navbar />
-      {/* <Bar /> */}
+      {/* <Bar height="24" /> */}
     </>
   );
 }
